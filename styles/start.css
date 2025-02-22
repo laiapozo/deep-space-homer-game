@@ -1,0 +1,38 @@
+.main {
+    background-image: url(../images/sky_bg.jpg);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 96px;
+}
+
+.img-container-homer {
+    width: 8%;
+}
+
+.img-homer-chips {
+    width: 100%;
+    transform: rotate(135deg);
+}
+
+.img-container-title {
+    width: 56%;
+}
+
+.img-title {
+    width: 100%;
+}
+
+.img-container-start {
+    width: 8%;
+}
+
+.img-start {
+    width: 100%;
+    &:hover {
+        opacity: 75%;
+    }
+}
