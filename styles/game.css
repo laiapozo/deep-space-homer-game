@@ -11,7 +11,7 @@
 }
 
 .header {
-  height: 15vh;
+  height: 20vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,6 +46,7 @@
     width: 100%;
 }
 
+/* Pendent solucionar l'espai raro a l'esquerra de la barra del temps */
 .container-timer {
   justify-items: flex-end;
 }
@@ -68,3 +69,49 @@
   font-family: var(--main-font);
   font-weight: bold;
 }
+
+.main {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 20px 20px;
+}
+
+/* .keys {
+  width: 8%;
+}
+
+.up {
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.down {
+  width: 100%;
+} */
+
+.homer {
+  height: 120px;
+  padding-left: 25px;
+  z-index: 1;
+}
+
+.chips {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
+  position: relative;
+}
+
+.chip {
+  width: 90px;
+}
+
+/* Posició exacte en la que la patata queda per sota del Homer */
+/* .chip3 {
+  position: absolute;
+  right: 1100px;
+} */
