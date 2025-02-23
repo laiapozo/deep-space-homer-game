@@ -1,0 +1,70 @@
+:root {
+  --main-color: #f8db27;
+  --second-color: #ff81c1;
+  --main-font: sans-serif;
+}
+
+.body {
+  background-image: url(../images/sky_bg.jpg);
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px 0 20px;
+}
+
+.img-container-score {
+  width: 35%;
+  position: relative;
+}
+
+.img-score {
+  width: 100%;
+}
+
+.score {
+  display: inline;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  color: var(--second-color);
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.container-title {
+    width: 30%;
+}
+
+.title-back {
+    width: 100%;
+}
+
+.container-timer {
+  justify-items: flex-end;
+}
+
+.img-container-timer {
+  width: 35%;
+  position: relative;
+}
+
+.img-timer {
+  width: 100%;
+}
+
+.timer {
+  display: inline;
+  position: absolute;
+  top: 22%;
+  left: 40%;
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-weight: bold;
+}
