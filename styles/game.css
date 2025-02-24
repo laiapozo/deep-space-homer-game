@@ -39,11 +39,11 @@
 }
 
 .container-title {
-    width: 30%;
+  width: 30%;
 }
 
 .title-back {
-    width: 100%;
+  width: 100%;
 }
 
 /* Pendent solucionar l'espai raro a l'esquerra de la barra del temps */
@@ -76,6 +76,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 0 20px 20px;
+  position: relative;
 }
 
 /* .keys {
@@ -115,3 +116,20 @@
   position: absolute;
   right: 1100px;
 } */
+
+.game-over {
+  background-color: var(--main-color);
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  right: 40%;
+  top: 30%;
+  border-radius: 25px;
+  border: var(--second-color) 10px solid;
+  display: none;
+}
+
+.game-over-title,
+.game-over-img {
+  width: 80%;
+}
