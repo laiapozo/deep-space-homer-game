@@ -36,6 +36,10 @@
 
 .title-back {
   width: 100%;
+
+  &:hover {
+    opacity: 75%;
+  }
 }
 
 .timer {
