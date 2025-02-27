@@ -1,6 +1,6 @@
 "use strict";
 
-let timeLimitInSeconds = 5;
+let timeLimitInSeconds = 105;
 const timer = document.querySelector(".timer");
 
 const gameOver = document.querySelector(".game-over");
