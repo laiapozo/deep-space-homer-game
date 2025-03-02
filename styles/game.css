@@ -83,17 +83,29 @@
   height: 120px;
   padding-left: 25px;
   z-index: 1;
+  position: absolute;
 }
-/*
-position: absolute
-  chip1 --> top: 3%
-  chip2 --> top: 21%
-  chip3 --> top: 39%
-  chip4 --> top: 57%
-  chip5 --> top: 75%
 
-  moviment de 18%
-*/
+.top1 {
+  top: 3%;
+}
+
+.top2 {
+  top: 21%;
+}
+
+.top3 {
+  top: 39%;
+}
+
+.top4 {
+  top: 57%;
+}
+
+.top5 {
+  top: 75%;
+}
+
 
 .chip {
   width: 90px;
