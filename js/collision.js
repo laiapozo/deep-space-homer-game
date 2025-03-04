@@ -1,5 +1,4 @@
 "use strict";
-
 const checkCollision = () => {
     // const homerPosition = document.querySelector(".js-homer").getBoundingClientRect();
     // const chip1Position = document.querySelector(".js-chip1").getBoundingClientRect();
@@ -8,37 +7,42 @@ const checkCollision = () => {
     // const chip4Position = document.querySelector(".js-chip4").getBoundingClientRect();
     // const chip5Position = document.querySelector(".js-chip5").getBoundingClientRect();
 
-    // const homer = document.querySelector(".js-homer");
+    const homer = document.querySelector(".js-homer");
+    const chip1 = document.querySelector(".js-chip1")
 
-    // const scoreHtml = document.querySelector(".js-score");
-    // let score =  parseInt(scoreHtml.innerHTML);
+    const scoreHtml = document.querySelector(".js-score");
+    let score =  parseInt(scoreHtml.innerHTML);
 
-    // console.log(homerPosition.x);
-    // console.log(homerPosition.y);
+    // console.log(homerPosition);
     // console.log(homer.offsetLeft);
     // console.log(homer.offsetTop);
+    // console.log(chip1.offsetLeft);
+    // console.log(chip1.offsetTop);
 
 
-    /* Posicions homi:
-        x sempre es 20
-        y -->   top3: 281.82293701171875
-                top2: 192.27084350585938
-                top1: 102.70833587646484
-                top4: 371.375
-                top5: 460.9375
+    /* 
+    Posicions homi:
+        offsetLeft sempre es: 20
+        offsetTop -->   top1: 14
+                        top2: 97
+                        top3: 180
+                        top4: 263
+                        top5: 346
         
-        Posicio chip1:
+    Posicions chip1:
+        offsetTop sempre es: 37
+        offsetLeft quan hi ha colission: 125
 
     */
 
         
-    // if (homerPosition.y === 460.9375 && chip1Position.y === 206 && Math.round(chip1Position.x) === 160) {
-    //     console.log("yesss");
-    //     ++score;
-    //     scoreHtml.innerHTML = score;
-    // }
+    if (homer.offsetTop === 14 && chip1.offsetLeft === 125) {
+        console.log("yesss");
+        ++score;
+        scoreHtml.innerHTML = score;
+    }
 }
 
-setInterval(checkCollision, 10000);
+setInterval(checkCollision, 10);
 
 document.addEventListener("DOMContentLoaded", checkCollision);
