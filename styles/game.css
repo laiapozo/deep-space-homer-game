@@ -9,6 +9,10 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .header {
@@ -56,12 +60,18 @@
 }
 
 .main {
-  height: 85vh;
+  height: 600px;
+  width: 900px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 0 20px 20px;
   position: relative;
+  border: #ff81c1 5px solid;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 /* Per si vull afegir les tecles de pujar i baixar */
@@ -80,7 +90,7 @@
 } */
 
 .homer {
-  height: 120px;
+  height: 96px;
   padding-left: 25px;
   z-index: 1;
   position: absolute;
@@ -106,56 +116,50 @@
   top: 75%;
 }
 
-
 .chip {
-  width: 90px;
+  width: 72px;
   position: absolute;
   right: -100px;
 
   &.chip1 {
     top: 8%;
-    animation: chip1Animation 5s linear infinite;
+    animation: chipAnimation 5s linear infinite;
   }
   &.chip2 {
     top: 26%;
-    animation: chip1Animation 5s 3s linear infinite;
+    animation: chipAnimation 5s 3s linear infinite;
   }
   &.chip3 {
     top: 44%;
-    animation: chip1Animation 4s 2s linear infinite;
+    animation: chipAnimation 4s 2s linear infinite;
   }
   &.chip4 {
     top: 62%;
-    animation: chip1Animation 7s 4s linear infinite;
+    animation: chipAnimation 7s 4s linear infinite;
   }
   &.chip5 {
     top: 80%;
-    animation: chip1Animation 7s 1s linear infinite;
+    animation: chipAnimation 7s 1s linear infinite;
   }
 }
 
-@keyframes chip1Animation {
+@keyframes chipAnimation {
   0% {
     right: -100px;
   }
   100% {
-    right: calc(100% + 100px); 
+    right: calc(100% + 100px);
   }
 }
-
-/* Posició exacte en la que la patata queda per sota del Homer */
-/* .chip3 {
-  position: absolute;
-  right: 1100px;
-} */
 
 .game-over {
   background-color: var(--main-color);
   width: 400px;
   height: 400px;
   position: absolute;
-  right: 37%;
-  top: 25%;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
   border-radius: 25px;
   border: var(--second-color) 10px solid;
   box-shadow: 5px 5px 5px black;
