@@ -135,11 +135,11 @@
   }
   &.chip4 {
     top: 62%;
-    animation: chipAnimation 7s 4s linear infinite;
+    animation: chipAnimation 6s 4s linear infinite;
   }
   &.chip5 {
     top: 80%;
-    animation: chipAnimation 7s 1s linear infinite;
+    animation: chipAnimation 6s 1s linear infinite;
   }
 }
 
