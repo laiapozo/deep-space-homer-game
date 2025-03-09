@@ -6,7 +6,7 @@
 ## Demo
 Puedes jugar aquí: [Deep Space Homer Game](https://laiapozo.github.io/deep-space-homer-game/index.html)
 
-![Homer atrapando chips](./images/preview_deep-space-homer-game.png)(https://laiapozo.github.io/deep-space-homer-game/index.html)
+[![Homer atrapando chips](./images/preview_deep-space-homer-game.png)](https://laiapozo.github.io/deep-space-homer-game/index.html)
 
 ## Instrucciones de juego
 1. Usa las **flechas arriba y abajo** del teclado para mover a Homer.
