@@ -1,14 +1,23 @@
 # Deep Space Homer Game
 
+## Índice
+- [Descripción](#descripción)
+- [Demo](#demo)
+- [Instrucciones del juego](#instrucciones-del-juego)
+- [Cómo ejecutar el juego](#cómo-ejecutar-el-juego)
+- [Tecnologías utilizadas](#tecnologías-utilizadas)
+- [Episodio original](#episodio-original)
+- [Créditos](#créditos)
+
 ## Descripción
-**Deep Space Homer Game** es un juego basado en el icónico episodio de Los Simpson "Deep Space Homer". En este juego, Homer debe atrapar todas las chips que flotan en el espacio mientras evita quedarse sin tiempo.
+**Deep Space Homer Game** es un juego basado en el icónico episodio de Los Simpson "Deep Space Homer". En este juego, Homer debe atrapar todas las chips que flotan en el espacio antes de quedarse sin tiempo.
 
 ## Demo
 Puedes jugar aquí: [Deep Space Homer Game](https://laiapozo.github.io/deep-space-homer-game/index.html)
 
 [![Homer atrapando chips](./images/preview_deep-space-homer-game.png)](https://laiapozo.github.io/deep-space-homer-game/index.html)
 
-## Instrucciones de juego
+## Instrucciones del juego
 1. Usa las **flechas arriba y abajo** del teclado para mover a Homer.
 2. Atrapa las **chips** que flotan en la pantalla para sumar puntos.
 3. Tienes **1 minuto y 45 segundos** para atrapar la mayor cantidad de chips posible.
@@ -28,7 +37,7 @@ Si quieres ejecutar el juego localmente:
 - **CSS**: Estilos y animaciones.
 - **JavaScript**: Lógica del juego (movimiento, colisiones, temporizador, puntuación).
 
-## Episodio Original
+## Episodio original
 [![Deep Space Homer](https://img.youtube.com/vi/adpUNslsmn4/0.jpg)](https://www.youtube.com/watch?v=adpUNslsmn4)
 
 ## Créditos
