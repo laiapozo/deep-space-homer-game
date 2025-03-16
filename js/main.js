@@ -1,12 +1,11 @@
 "use strict";
 
-// TIMER
-
 let timeLimitInSeconds = 105;
 const timer = document.querySelector(".timer");
-
 const gameOver = document.querySelector(".game-over");
+const homer = document.querySelector(".js-homer");
 
+// TIMER
 function startTimer() {
   timeLimitInSeconds--;
 
@@ -17,24 +16,16 @@ function startTimer() {
 
   if (timeLimitInSeconds < 0) {
     clearInterval(timerInterval);
+    clearInterval(collisionInterval);
+    gameOver.classList.remove("hidden");
+    document.removeEventListener("keydown", handleKey);
     return (timer.innerHtml = "00:00");
   }
 
   timer.innerHTML = minutes + ":" + seconds;
-
-  if (timer.innerHTML === "00:00") {
-    gameOver.classList.remove("hidden");
-    clearInterval(collisionInterval);
-    document.removeEventListener("keydown", handleKey);
-  }
 }
 
-const timerInterval = setInterval(startTimer, 1000);
-
 // KEYDOWN
-
-const homer = document.querySelector(".js-homer");
-
 const handleKey = (event) => {
   if (event.key === "ArrowUp") {
     if (homer.classList.contains("top2")) {
@@ -60,10 +51,7 @@ const handleKey = (event) => {
   }
 };
 
-document.addEventListener("keydown", handleKey);
-
 // COLLISION
-
 const checkCollision = () => {
   const homer = document.querySelector(".js-homer");
   const chip1 = document.querySelector(".js-chip1");
@@ -123,5 +111,7 @@ const checkCollision = () => {
 };
 
 const collisionInterval = setInterval(checkCollision, 1000);
+const timerInterval = setInterval(startTimer, 1000);
 
 document.addEventListener("DOMContentLoaded", checkCollision);
+document.addEventListener("keydown", handleKey);
