@@ -60,6 +60,7 @@ const checkCollision = () => {
   const chip4 = document.querySelector(".js-chip4");
   const chip5 = document.querySelector(".js-chip5");
   const scoreHtml = document.querySelector(".js-score");
+  const crunchSound = document.querySelector(".crunch-sound");
   let score = parseInt(scoreHtml.innerHTML);
 
   if (
@@ -71,6 +72,7 @@ const checkCollision = () => {
     ++score;
     score < 10 ? (score = "0" + score) : score;
     scoreHtml.innerHTML = score;
+    crunchSound.play();
   } else if (
     homer.offsetTop > 95 &&
     homer.offsetTop < 99 &&
@@ -80,6 +82,7 @@ const checkCollision = () => {
     ++score;
     score < 10 ? (score = "0" + score) : score;
     scoreHtml.innerHTML = score;
+    crunchSound.play();
   } else if (
     homer.offsetTop > 178 &&
     homer.offsetTop < 182 &&
@@ -89,6 +92,7 @@ const checkCollision = () => {
     ++score;
     score < 10 ? (score = "0" + score) : score;
     scoreHtml.innerHTML = score;
+    crunchSound.play();
   } else if (
     homer.offsetTop > 261 &&
     homer.offsetTop < 265 &&
@@ -98,6 +102,7 @@ const checkCollision = () => {
     ++score;
     score < 10 ? (score = "0" + score) : score;
     scoreHtml.innerHTML = score;
+    crunchSound.play();
   } else if (
     homer.offsetTop > 344 &&
     homer.offsetTop < 348 &&
@@ -107,6 +112,7 @@ const checkCollision = () => {
     ++score;
     score < 10 ? (score = "0" + score) : score;
     scoreHtml.innerHTML = score;
+    crunchSound.play();
   }
 };
 
