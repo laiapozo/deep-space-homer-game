@@ -10,7 +10,7 @@ function startTimer() {
   timeLimitInSeconds--;
 
   let minutes = "0" + Math.floor(timeLimitInSeconds / 60);
-  let seconds = timeLimitInSeconds % 60; // Por ejemplo con 105 --> 105 = 60 × 1 + 45 (45 son los segundos que se necesitan)
+  let seconds = timeLimitInSeconds % 60;
 
   seconds < 10 ? (seconds = "0" + seconds) : seconds;
 
@@ -19,7 +19,8 @@ function startTimer() {
     clearInterval(collisionInterval);
     gameOver.classList.remove("hidden");
     document.removeEventListener("keydown", handleKey);
-    return (timer.innerHtml = "00:00");
+    minutes = "00";
+    seconds = "00";
   }
 
   timer.innerHTML = minutes + ":" + seconds;
@@ -34,8 +35,7 @@ const handleKey = (event) => {
       homer.classList.replace("top3", "top2");
     } else if (homer.classList.contains("top4")) {
       homer.classList.replace("top4", "top3");
-    }
-    if (homer.classList.contains("top5")) {
+    } else if (homer.classList.contains("top5")) {
       homer.classList.replace("top5", "top4");
     }
   } else if (event.key === "ArrowDown") {
@@ -119,5 +119,4 @@ const checkCollision = () => {
 const collisionInterval = setInterval(checkCollision, 1000);
 const timerInterval = setInterval(startTimer, 1000);
 
-document.addEventListener("DOMContentLoaded", checkCollision);
 document.addEventListener("keydown", handleKey);
