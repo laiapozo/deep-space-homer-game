@@ -1,12 +1,12 @@
 "use strict";
 
 let timeLimitInSeconds = 105;
-const timer = document.querySelector(".timer");
-const gameOver = document.querySelector(".game-over");
 const homer = document.querySelector(".js-homer");
 
 // TIMER
 function startTimer() {
+  const timer = document.querySelector(".timer");
+  const gameOver = document.querySelector(".game-over");
   timeLimitInSeconds--;
 
   let minutes = "0" + Math.floor(timeLimitInSeconds / 60);
@@ -53,7 +53,6 @@ const handleKey = (event) => {
 
 // COLLISION
 const checkCollision = () => {
-  const homer = document.querySelector(".js-homer");
   const chip1 = document.querySelector(".js-chip1");
   const chip2 = document.querySelector(".js-chip2");
   const chip3 = document.querySelector(".js-chip3");
@@ -64,8 +63,7 @@ const checkCollision = () => {
   let score = parseInt(scoreHtml.innerHTML);
 
   if (
-    homer.offsetTop > 12 &&
-    homer.offsetTop < 16 &&
+    homer.classList.contains("top1") &&
     chip1.offsetLeft < 150 &&
     chip1.offsetLeft > -35
   ) {
@@ -74,8 +72,7 @@ const checkCollision = () => {
     scoreHtml.innerHTML = score;
     crunchSound.play();
   } else if (
-    homer.offsetTop > 95 &&
-    homer.offsetTop < 99 &&
+    homer.classList.contains("top2") &&
     chip2.offsetLeft < 150 &&
     chip2.offsetLeft > -35
   ) {
@@ -84,8 +81,7 @@ const checkCollision = () => {
     scoreHtml.innerHTML = score;
     crunchSound.play();
   } else if (
-    homer.offsetTop > 178 &&
-    homer.offsetTop < 182 &&
+    homer.classList.contains("top3") &&
     chip3.offsetLeft > -35 &&
     chip3.offsetLeft < 150
   ) {
@@ -94,8 +90,7 @@ const checkCollision = () => {
     scoreHtml.innerHTML = score;
     crunchSound.play();
   } else if (
-    homer.offsetTop > 261 &&
-    homer.offsetTop < 265 &&
+    homer.classList.contains("top4") &&
     chip4.offsetLeft > -35 &&
     chip4.offsetLeft < 150
   ) {
@@ -104,8 +99,7 @@ const checkCollision = () => {
     scoreHtml.innerHTML = score;
     crunchSound.play();
   } else if (
-    homer.offsetTop > 344 &&
-    homer.offsetTop < 348 &&
+    homer.classList.contains("top5") &&
     chip5.offsetLeft > -35 &&
     chip5.offsetLeft < 150
   ) {
