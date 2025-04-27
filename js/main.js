@@ -1,7 +1,12 @@
 "use strict";
 
 let timeLimitInSeconds = 105;
+
 const homer = document.querySelector(".js-homer");
+
+const volume = document.querySelector(".js-volume");
+const audio = document.querySelector(".audio");
+audio.muted = false;
 
 // TIMER
 function startTimer() {
@@ -110,7 +115,15 @@ const checkCollision = () => {
   }
 };
 
+// VOLUME
+const handleVolume = () => {
+  audio.muted = audio.muted === false ? true : false;
+  volume.classList.toggle("volume-off");
+}
+
 const collisionInterval = setInterval(checkCollision, 1000);
 const timerInterval = setInterval(startTimer, 1000);
 
 document.addEventListener("keydown", handleKey);
+
+volume.addEventListener("click", handleVolume);

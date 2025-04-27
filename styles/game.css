@@ -139,6 +139,20 @@
   }
 }
 
+.volume {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-image: url("../images/volume-on.png");
+  background-size: cover;
+  margin-bottom: 5px;
+  justify-self: right;
+}
+
+.volume-off {
+  background-image: url("../images/volume-off.png");
+}
+
 .game-over {
   background-color: var(--main-color);
   width: 400px;
